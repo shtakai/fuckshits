@@ -5,7 +5,7 @@ import Header from './Header'
 import Meta from './Meta'
 
 const theme = {
-  red: '#FF0000',
+  red: '#a14c93',
   black: '#393939',
   lightGrey: '#3A3A3A',
   offWhite: '#EDEDED',
@@ -22,6 +22,34 @@ const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
+`
+
+injectGlobal`
+  @font-face {
+    font-family: 'radnika_next';  
+    src: url("static/radnikanext-medium-webfont.woff2") format('woff2');
+    
+    font-weight: normal;
+    font-style: normal;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: 'radnika_next';  
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  a {
+    text-decoration: none;
+    color: ${theme.black}
+  }
 `
 
 class Page extends Component {
