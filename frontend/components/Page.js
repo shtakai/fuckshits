@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider, injectGlobal} from 'styled-components'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+
+Router.onRouteChangeStart = () => {
+  NProgress.start()
+}
+
+Router.onRouteChangeComplete = () => {
+  NProgress.done()
+}
+
+Router.onRouteChangeError = () => {
+  NProgress.done()
+}
 
 import Header from './Header'
 import Meta from './Meta'
