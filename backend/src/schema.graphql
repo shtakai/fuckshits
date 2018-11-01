@@ -1,11 +1,9 @@
-type Jap {
-  name: String!
-}
+# import * from './generated/prisma.graphql'
 
 type Mutation {
-  createJap(name: String!): Jap
+  createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
 }
 
 type Query {
-  japs: [Jap]!
+  items: [Item]!
 }
