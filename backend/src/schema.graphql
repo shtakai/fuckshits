@@ -1,7 +1,11 @@
+type Jap {
+  name: String!
+}
+
 type Mutation {
-  fuck: String
+  createJap(name: String!): Jap
 }
 
 type Query {
-  fuck: String
+  japs: [Jap]!
 }
